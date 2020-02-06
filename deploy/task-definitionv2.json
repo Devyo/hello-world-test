@@ -1,0 +1,57 @@
+{
+  "family": "Hello-World-Sync", 
+  "taskRoleArn": "arn:aws:iam::236538692964:role/ecsTaskExecutionRole", 
+  "executionRoleArn": "arn:aws:iam::236538692964:role/ecsTaskExecutionRole", 
+  "networkMode": "awsvpc", 
+  "containerDefinitions": [
+      {
+          "name": "hello-world", 
+          "image": "236538692964.dkr.ecr.us-west-1.amazonaws.com/aws-hello-world:v1.0.0",  
+          "cpu": 512, 
+          "memory": 1024, 
+          "portMappings": [
+          ], 
+          "essential": true, 
+          "entryPoint": [
+              ""
+          ], 
+          "command": [
+              ""
+          ], 
+          "environment": [], 
+          "secrets": [
+          ],
+          "privileged": false, 
+          "readonlyRootFilesystem": true, 
+          "interactive": true, 
+          "pseudoTerminal": true, 
+          "dockerLabels": {
+              "KeyName": ""
+          }, 
+          "ulimits": [
+              {
+                  "name": "core", 
+                  "softLimit": 0, 
+                  "hardLimit": 0
+              }
+          ], 
+          "logConfiguration": {
+              "logDriver": "awslogs", 
+              "options": {
+                "awslogs-group": "/ecs/Hello-World-Sync",
+                "awslogs-region": "us-west-1",
+                "awslogs-stream-prefix": "ecs"
+              }
+          }, 
+          "resourceRequirements": [
+          ]
+      }
+  ], 
+  "placementConstraints": [
+  ], 
+  "requiresCompatibilities": [
+      "FARGATE"
+  ], 
+  "cpu": "512", 
+  "memory": "1024"
+}
